@@ -1,1 +1,282 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강인석 | Software Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for standard icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', /* Soft Blue for accents */
+                        secondary: '#475569', /* Slate for secondary text */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Minimal custom CSS for things Tailwind doesn't cover natively */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1e293b; /* Slate 800 */
+            background-color: #f8fafc; /* Slate 50 */
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <header class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight text-gray-900">
+                Inseok Kang.
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-secondary">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+            </nav>
+            <a href="./assets/docs/Kang_Inseok_Resume.pdf" target="_blank" class="hidden md:inline-block px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                Resume
+            </a>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pt-24">
+        
+        <section id="hero" class="py-20 md:py-32 flex flex-col justify-center items-start">
+            <p class="text-primary font-medium mb-4">Hello, I'm</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900">
+                강인석
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-secondary">
+                Software Developer
+            </h2>
+            <p class="max-w-2xl text-lg text-secondary leading-relaxed mb-10">
+                문제 해결을 즐기고, 데이터를 기반으로 한 효율적인 시스템 구축에 관심이 많은 개발자입니다. 
+                백엔드 개발부터 머신러닝 모델 적용까지, 다양한 기술을 탐구하고 실재하는 문제를 개선하는 것을 목표로 합니다.
+            </p>
+            <div class="flex gap-4">
+                <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors shadow-sm">
+                    View Projects
+                </a>
+                <a href="mailto:your.email@example.com" class="bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors shadow-sm">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 border-t border-gray-200">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">About Me</h2>
+                <div class="w-12 h-1 bg-primary rounded"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 text-secondary leading-relaxed text-lg">
+                <div>
+                    <p class="mb-4">
+                        컴퓨터공학을 전공하며 시스템의 기본 원리와 소프트웨어 아키텍처에 대한 이해를 넓혀왔습니다.
+                    </p>
+                    <p>
+                        단순히 코드를 작성하는 것을 넘어, 사용자의 불편함을 해소하고 비즈니스 로직을 견고하게 만드는 백엔드 시스템 및 데이터 분석/머신러닝 파이프라인에 깊은 흥미를 가지고 있습니다.
+                    </p>
+                </div>
+                <div>
+                    <p class="mb-4">
+                        팀 프로젝트와 다양한 대외 활동(스포츠 클럽 회장, 멘토링 등)을 통해 적극적인 커뮤니케이션과 협업의 가치를 배웠습니다. 
+                    </p>
+                    <p>
+                        새로운 기술을 배우는 데 주저함이 없으며, 주어진 과제에 책임감을 가지고 끝까지 완수하는 개발자입니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 border-t border-gray-200">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Skills</h2>
+                <div class="w-12 h-1 bg-primary rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Category 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fab fa-python text-primary"></i> Backend
+                    </h3>
+                    <ul class="space-y-2 text-secondary text-sm">
+                        <li>Python</li>
+                        <li>Flask / FastAPI</li>
+                        <li>SQLite / SQL</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-brain text-primary"></i> Machine Learning
+                    </h3>
+                    <ul class="space-y-2 text-secondary text-sm">
+                        <li>Scikit-learn</li>
+                        <li>CatBoost</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-code text-primary"></i> Frontend
+                    </h3>
+                    <ul class="space-y-2 text-secondary text-sm">
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-tools text-primary"></i> Tools & Others
+                    </h3>
+                    <ul class="space-y-2 text-secondary text-sm">
+                        <li>Git & GitHub</li>
+                        <li>Linux Environment</li>
+                        <li>Network Fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 border-t border-gray-200">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Projects</h2>
+                <div class="w-12 h-1 bg-primary rounded"></div>
+            </div>
+
+            <div class="space-y-12">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
+                        <i class="fas fa-shield-alt text-6xl text-gray-300"></i>
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">피싱 탐지 시스템</h3>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-secondary mb-6 leading-relaxed">
+                            악성 URL 및 웹 페이지를 식별하는 머신러닝 기반 탐지 시스템입니다. 웹 페이지의 HTML 구조와 URL 특성을 추출하고, 데이터를 분석하여 높은 정확도로 피싱 사이트를 분류하는 앙상블 모델을 개발했습니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Machine Learning</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Data Parsing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
+                        <i class="fas fa-network-wired text-6xl text-gray-300"></i>
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">IoT 기기 관리 시스템 기획</h3>
+                            <a href="./assets/docs/iot_project.pdf" target="_blank" class="text-gray-400 hover:text-primary transition-colors text-xl" title="View PDF"><i class="fas fa-file-pdf"></i></a>
+                        </div>
+                        <p class="text-secondary mb-6 leading-relaxed">
+                            외부에 노출된 IoT 장비들의 상태를 점검하고 관리하기 위한 시스템 아키텍처 기획 프로젝트입니다. 네트워크 상의 취약점을 식별하고 자산을 효과적으로 모니터링하기 위한 방법론을 수립하고 문서화했습니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">System Architecture</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Network Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
+                        <i class="fas fa-bicycle text-6xl text-gray-300"></i>
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">자전거 출퇴근 챌린지 웹 서비스</h3>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-secondary mb-6 leading-relaxed">
+                            사용자들의 자전거 출퇴근 기록을 저장하고 랭킹을 제공하는 웹 애플리케이션입니다. Flask 프레임워크를 기반으로 백엔드 API를 구축하고, 데이터베이스 연동 및 프론트엔드 UI를 직접 구현하여 배포했습니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Flask</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Web Development</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="py-12 border-t border-gray-200 mt-12 flex flex-col items-center justify-center">
+            <div class="flex space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-gray-900 transition-colors text-2xl"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-red-500 transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <a href="./assets/docs/Kang_Inseok_Resume.pdf" target="_blank" class="mb-8 inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                <i class="fas fa-download"></i> Download Resume PDF
+            </a>
+            
+            <p class="text-gray-400 text-sm">
+                &copy; 2024 Inseok Kang. All rights reserved.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
