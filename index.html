@@ -48,7 +48,7 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-primary selection:text-white">
+<body class="antialiased selection:bg-primary selection:text-white relative">
 
     <header class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -121,7 +121,6 @@
             </div>
 
             <div class="space-y-8">
-                
                 <!-- Experience 1: 미래내일 일경험 (보안 엔지니어 인턴) -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover">
                     <div class="flex flex-col md:flex-row gap-6 items-start">
@@ -131,7 +130,7 @@
                         <div class="flex-1 w-full">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-900">정보보안 엔지니어 인턴 (미래내일 일경험)</h3>
+                                    <h3 class="text-2xl font-bold text-gray-900">정보보안 엔지니어 인턴</h3>
                                 </div>
                                 <span class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium mt-3 md:mt-0">
                                     2025.08 - 2025.10
@@ -169,12 +168,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         
         <!-- Education & Certifications Section -->
-        <section id="education" class="py-20 border-t border-gray-200">
+        <section class="py-20 border-t border-gray-200">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Education & Certifications</h2>
                 <div class="w-12 h-1 bg-primary rounded"></div>
@@ -235,6 +233,7 @@
                                 <strong class="text-gray-900">컴퓨터활용능력 1급</strong> (2018.12 취득)
                             </div>
                         </li>
+                        
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check text-primary mt-1"></i>
                             <div>
@@ -262,39 +261,25 @@
                     <ul class="space-y-2 text-secondary text-sm">
                         <li>Python</li>
                         <li>Flask</li>
-                        <li>REST API</li>
+                        <li>Automation</li>
                         <li>Web Crawling</li>
-                        <li>LLM Fine-tuning</li>
                     </ul>
                 </div>
                 
                 <!-- Skill Category 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-brain text-primary"></i> Security & Infra
+                        <i class="fas fa-brain text-primary"></i> Security & Infrastructure
                     </h3>
                     <ul class="space-y-2 text-secondary text-sm">
-                        <li>Network Security</li>
-                        <li>Incident Response</li>
-                        <li>Log Analysis (Splunk)</li>
-                        <li>Network Segmentation</li>
-                        <li>Security Monitoring</li>
+                        <li>Firewall</li>
+                        <li>IPsec VPN</li>
+                        <li>SIEM</li>
+                        <li>VLAN 망분리</li>
                     </ul>
                 </div>
 
                 <!-- Skill Category 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-code text-primary"></i> Frontend
-                    </h3>
-                    <ul class="space-y-2 text-secondary text-sm">
-                        <li>HTML5 / CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Tailwind CSS</li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category 4 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
                         <i class="fas fa-tools text-primary"></i> Tools & Others
@@ -318,9 +303,10 @@
                 
                 <!-- Project 5 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
-                        <i class="fas fa-network-wired text-6xl text-gray-300"></i>
+                    <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 group cursor-pointer">
+                        <img src="./assets/img/infra_live.png" alt="보안 인프라 구축 프로젝트" class="modal-trigger w-full h-full object-cover min-h-[200px] group-hover:scale-105 transition-transform duration-300">
                     </div>
+                    
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">보안 인프라 구성을 통한 IT 침해사고 대비 체계 구축</h3>
@@ -332,23 +318,28 @@
                             </div>
                         </div>
                         <p class="text-secondary mb-6 leading-relaxed">
-                            음원 스트리밍 플랫폼 서비스 환경을 바탕으로 A/B 이중 센터 아키텍처 설계, 논리적·물리적 망분리, 네트워크 방화벽 구축, 안전한 터널링을 통한 보안 통신, 웹 애플리케이션 방화벽(WAF) 적용 및 통합 보안 관제(SIEM) 연동을 수행한 실전형 보안 인프라 구축 프로젝트입니다.
+                            음원 스트리밍 플랫폼 서비스 환경을 바탕으로 A/B 이중 센터 아키텍처 설계, VLAN 기반 물리적·논리적 망 분리, pfSense 방화벽, IPsec VPN 터널링, ModSecurity WAF 및 Splunk SIEM 연동을 수행한 실전형 보안 인프라 구축 프로젝트입니다.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Network Architecture</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Network Segmentation</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Firewall</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Secure Communication</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Security Monitoring</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">pfSense</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">IPsec VPN</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Splunk SIEM</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">ModSecurity WAF</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">VLAN 망분리</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 1 -->
+                <!-- Project 1 (동영상 재생 태그 적용) -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
-                        <i class="fas fa-shield-alt text-6xl text-gray-300"></i>
+                    <!-- 🌟 동영상 플레이어 영역 🌟 -->
+                    <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 bg-black flex items-center justify-center">
+                        <video controls poster="./assets/img/Phishbox_live.png" class="w-full h-full object-cover min-h-[200px]">
+                            <source src="./assets/img/Phishbox_live.mp4" type="video/mp4">
+                            브라우저가 비디오 태그를 지원하지 않습니다.
+                        </video>
                     </div>
+
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">AI기반 피싱 URL 탐지 웹 및 크롬 플러그인</h3>
@@ -357,6 +348,7 @@
                                 <a href="./assets/docs/phish_box.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="발표 자료 보기(PDF)">
                                     <i class="fas fa-file-pdf"></i>
                                 </a>
+                                
                                 <a href="https://github.com/yonghoya/AI_Security_Network_Project" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub Repository">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -373,11 +365,12 @@
                     </div>
                 </div>
 
-                <!-- Project: 2 -->
+                <!-- Project 2 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
-                        <i class="fas fa-network-wired text-6xl text-gray-300"></i>
+                    <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 group cursor-pointer">
+                        <img src="./assets/img/project_docker.png" alt="Docker 가상 취약점 프로젝트" class="modal-trigger w-full h-full object-cover min-h-[200px] group-hover:scale-105 transition-transform duration-300">
                     </div>
+
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">Docker 기반 가상 취약점 환경 가동 및 자동화 PoC 파이프라인 시스템</h3>
@@ -401,11 +394,15 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 3 (유튜브 링크 아이콘 추가) -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
-                        <i class="fas fa-laptop-code text-6xl text-gray-300"></i>
+                    <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 bg-black flex items-center justify-center">
+                        <video controls poster="./assets/img/codeboomboom.png" class="w-full h-full object-cover min-h-[200px]">
+                            <source src="./assets/img/codeboomboom.mp4" type="video/mp4">
+                            브라우저가 비디오 태그를 지원하지 않습니다.
+                        </video>
                     </div>
+
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">AI 정적 분석 활용 시큐어 코딩 점검 도구</h3>
@@ -430,11 +427,13 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Project 4 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
-                        <i class="fas fa-bicycle text-6xl text-gray-300"></i>
+                    <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 group cursor-pointer">
+                        <img src="./assets/img/project_aws.png" alt="AWS 보안 스냅샷 도구" class="modal-trigger w-full h-full object-cover min-h-[200px] group-hover:scale-105 transition-transform duration-300">
                     </div>
+
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">AWS Infrastructure Security Snapshot and Analysis Tool</h3>
@@ -541,7 +540,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Activity 1 -->
+                <!-- Activity 1: 사회리더 멘토링 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
@@ -554,7 +553,7 @@
                     </p>
                 </div>
 
-                <!-- Activity 2 -->
+                <!-- Activity 2: 중학생 멘토링 (야구선수/만다라트) -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
@@ -566,8 +565,7 @@
                         야구 선수를 지망하는 중학교 2학년 학생을 대상으로 만다라트(Mandalart) 기법을 활용해 구체적인 목표 설정과 실행 계획 수립을 도왔습니다. 누군가의 성장을 돕는 과정에서 깊은 책임감과 배려심을 배웠습니다.
                     </p>
                 </div>
-                
-                <!-- Activity 3 -->
+                <!-- Activity 4: 개인정보 모니터링단 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
@@ -589,7 +587,16 @@
         </footer>
     </main>
 
+    <!-- 이미지 확대 모달 영역 -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex justify-center items-center p-4 transition-opacity duration-300 opacity-0">
+        <button id="closeModal" class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none z-[110]">
+            <i class="fas fa-times text-4xl"></i>
+        </button>
+        <img id="modalImage" src="" alt="확대된 이미지" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+    </div>
+
     <script>
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -597,6 +604,54 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // 이미지 모달 기능 로직
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        const triggers = document.querySelectorAll('.modal-trigger');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideModal() {
+            modal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        triggers.forEach(img => {
+            img.addEventListener('click', function() {
+                openModal(this.src);
+            });
+        });
+
+        closeModal.addEventListener('click', hideModal);
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                hideModal();
+            }
         });
     </script>
 </body>
