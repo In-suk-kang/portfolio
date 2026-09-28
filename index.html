@@ -54,6 +54,7 @@
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <nav class="hidden md:flex space-x-8 text-sm font-medium text-secondary">
                 <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
                 <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
                 <a href="#publications" class="hover:text-primary transition-colors">Publications & Papers</a>
@@ -111,9 +112,69 @@
                 </div>
             </div>
         </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-20 border-t border-gray-200">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Work Experience</h2>
+                <div class="w-12 h-1 bg-primary rounded"></div>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- Experience 1: 미래내일 일경험 (보안 엔지니어 인턴) -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="bg-blue-50 p-4 rounded-xl text-primary hidden md:block">
+                            <i class="fas fa-briefcase text-3xl"></i>
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">정보보안 엔지니어 인턴 (미래내일 일경험)</h3>
+                                </div>
+                                <span class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium mt-3 md:mt-0">
+                                    2025.08 - 2025.10
+                                </span>
+                            </div>
+                            
+                            <ul class="text-secondary leading-relaxed space-y-3 mb-6">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-primary mt-1 text-sm"></i>
+                                    <div>
+                                        <strong class="text-gray-900">다크웹 위협 정보 스크래핑 및 실시간 모니터링 자동화:</strong> Python(BeautifulSoup4)을 활용하여 랜섬웨어 피해 정황이 확인된 타겟 기업의 다크웹 데이터 유출 사이트를 10분 주기로 스크래핑하고, 게시글 상태 변화를 실시간으로 비교 및 감지하는 파이프라인을 구축했습니다.
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-primary mt-1 text-sm"></i>
+                                    <div>
+                                        <strong class="text-gray-900">위협 인텔리전스(CTI) 연동을 통한 선제적 대응:</strong> 감지된 유출 데이터를 바탕으로 타겟 기업의 민감 데이터 노출 현황을 신속하게 파악하고, 피해 확산 방지 및 후속 대응을 위한 선제적 위협 알림 체계를 마련했습니다.
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-primary mt-1 text-sm"></i>
+                                    <div>
+                                        <strong class="text-gray-900">CVE 기반 맞춤형 Exploit 생성 모델 파인튜닝 및 환경 최적화:</strong> GitHub API와 Exploit-DB를 활용해 특정 CVE에 대한 취약점 정보 및 공격 코드(Exploit) 데이터를 수집하고, 이를 맞춤형 공격 코드로 자동 생성하도록 LLM 파인튜닝을 수행했습니다. 이 과정에서 사내 GPU VRAM 가용량의 한계를 극복하기 위해 양자화(Quantization) 기법을 적용하여 메모리 사용량을 최적화함으로써, 제한된 인프라 내에서도 안정적으로 학습을 완료하고 모델을 검증할 수 있었습니다.
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">Python (BS4)</span>
+                                <span class="bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">Dark Web Crawling</span>
+                                <span class="bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">CTI</span>
+                                <span class="bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">LLM Fine-tuning</span>
+                                <span class="bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">Quantization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         
         <!-- Education & Certifications Section -->
-        <section class="py-20 border-t border-gray-200">
+        <section id="education" class="py-20 border-t border-gray-200">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Education & Certifications</h2>
                 <div class="w-12 h-1 bg-primary rounded"></div>
@@ -128,9 +189,7 @@
                             <i class="fas fa-graduation-cap text-xl"></i>
                         </div>
                         <div>
-                            <!-- 대학교 이름으로 수정해 주세요 -->
                             <h3 class="text-xl font-bold text-gray-900">창원대학교 컴퓨터공학과</h3>
-                            <!-- 입학 및 졸업(예정) 연월 수정 -->
                             <p class="text-gray-500 text-sm font-medium mt-1">2024.03 - 2027.02 졸업예정</p>
                         </div>
                     </div>
@@ -151,7 +210,6 @@
                         </div>
                     </div>
                     
-                    <!-- 본인이 보유한 자격증으로 리스트를 수정해 주세요 -->
                     <ul class="text-secondary leading-relaxed text-sm space-y-3 mt-2">
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check text-primary mt-1"></i>
@@ -177,7 +235,6 @@
                                 <strong class="text-gray-900">컴퓨터활용능력 1급</strong> (2018.12 취득)
                             </div>
                         </li>
-                        
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check text-primary mt-1"></i>
                             <div>
@@ -205,25 +262,39 @@
                     <ul class="space-y-2 text-secondary text-sm">
                         <li>Python</li>
                         <li>Flask</li>
-                        <li>Automation</li>
+                        <li>REST API</li>
                         <li>Web Crawling</li>
+                        <li>LLM Fine-tuning</li>
                     </ul>
                 </div>
                 
                 <!-- Skill Category 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-brain text-primary"></i> Security & Infrastructure
+                        <i class="fas fa-brain text-primary"></i> Security & Infra
                     </h3>
                     <ul class="space-y-2 text-secondary text-sm">
-                        <li>Firewall</li>
-                        <li>IPsec VPN</li>
-                        <li>SIEM</li>
-                        <li>VLAN 망분리</li>
+                        <li>Network Security</li>
+                        <li>Incident Response</li>
+                        <li>Log Analysis (Splunk)</li>
+                        <li>Network Segmentation</li>
+                        <li>Security Monitoring</li>
                     </ul>
                 </div>
 
                 <!-- Skill Category 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-code text-primary"></i> Frontend
+                    </h3>
+                    <ul class="space-y-2 text-secondary text-sm">
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 4 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
                         <i class="fas fa-tools text-primary"></i> Tools & Others
@@ -247,8 +318,7 @@
                 
                 <!-- Project 5 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
-                        <!-- 네트워크 및 인프라 보안 아이콘 -->
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
                         <i class="fas fa-network-wired text-6xl text-gray-300"></i>
                     </div>
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
@@ -262,35 +332,31 @@
                             </div>
                         </div>
                         <p class="text-secondary mb-6 leading-relaxed">
-                            음원 스트리밍 플랫폼 서비스 환경을 바탕으로 A/B 이중 센터 아키텍처 설계, VLAN 기반 물리적·논리적 망 분리, pfSense 방화벽, IPsec VPN 터널링, ModSecurity WAF 및 Splunk SIEM 연동을 수행한 실전형 보안 인프라 구축 프로젝트입니다.
+                            음원 스트리밍 플랫폼 서비스 환경을 바탕으로 A/B 이중 센터 아키텍처 설계, 논리적·물리적 망분리, 네트워크 방화벽 구축, 안전한 터널링을 통한 보안 통신, 웹 애플리케이션 방화벽(WAF) 적용 및 통합 보안 관제(SIEM) 연동을 수행한 실전형 보안 인프라 구축 프로젝트입니다.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">pfSense</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">IPsec VPN</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Splunk SIEM</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">ModSecurity WAF</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">VLAN 망분리</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Network Architecture</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Network Segmentation</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Firewall</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Secure Communication</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Security Monitoring</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 1 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
                         <i class="fas fa-shield-alt text-6xl text-gray-300"></i>
                     </div>
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">AI기반 피싱 URL 탐지 웹 및 크롬 플러그인</h3>
                             
-                            <!-- 아이콘들을 묶어주는 div 추가 (gap-4로 아이콘 간격 조절) -->
                             <div class="flex gap-4">
-                                <!-- PDF 문서 링크 (PPT일 경우 fa-file-powerpoint 사용) -->
                                 <a href="./assets/docs/phish_box.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="발표 자료 보기(PDF)">
                                     <i class="fas fa-file-pdf"></i>
                                 </a>
-                                
-                                <!-- GitHub 링크 -->
                                 <a href="https://github.com/yonghoya/AI_Security_Network_Project" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub Repository">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -309,31 +375,25 @@
 
                 <!-- Project: 2 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
-                        <!-- 네트워크/도커에 어울리는 아이콘 유지 -->
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
                         <i class="fas fa-network-wired text-6xl text-gray-300"></i>
                     </div>
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">Docker 기반 가상 취약점 환경 가동 및 자동화 PoC 파이프라인 시스템</h3>
                             
-                            <!-- 아이콘 그룹 (PDF와 GitHub 나란히 배치) -->
                             <div class="flex gap-4">
-                                
-                                <!-- GitHub 링크 (작성하신 주소 반영) -->
                                 <a href="https://github.com/In-suk-kang/cve_poc" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors text-xl" title="GitHub Repository">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                         
-                        <!-- 설명란 문장 다듬기 ('시스템입니다.' 추가하여 가독성 향상) -->
                         <p class="text-secondary mb-6 leading-relaxed">
                             Docker 기반 가상 취약점 환경 가동 및 자동화 Exploit 파이프라인 시스템입니다. 호스트 환경과 격리된 도커 네트워크 내에서 안전하게 취약점을 생성, 테스트, 관리할 수 있도록 구축했습니다.
                         </p>
                         
                         <div class="flex flex-wrap gap-2 mt-auto">
-                            <!-- 핵심 기술인 Docker 태그 추가 -->
                             <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-medium">Docker</span>
                             <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">System Architecture</span>
                             <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Vulnerability Analysis</span>
@@ -343,15 +403,13 @@
 
                 <!-- Project 3 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
-                        <!-- 코드 분석 및 웹 서비스에 어울리는 아이콘으로 변경 -->
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
                         <i class="fas fa-laptop-code text-6xl text-gray-300"></i>
                     </div>
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-2xl font-bold text-gray-900">AI 정적 분석 활용 시큐어 코딩 점검 도구</h3>
                             
-                            <!-- PDF와 GitHub 아이콘을 나란히 배치하고 새 탭 열기 적용 -->
                             <div class="flex gap-4">
                                 <a href="./assets/docs/hanium.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="보고서 보기(PDF)">
                                     <i class="fas fa-file-pdf"></i>
@@ -374,7 +432,7 @@
                 </div>
                 <!-- Project 4 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100">
+                    <div class="w-full md:w-1/3 flex items-center justify-center bg-gray-50 rounded-xl py-12 border border-gray-100 relative overflow-hidden">
                         <i class="fas fa-bicycle text-6xl text-gray-300"></i>
                     </div>
                     <div class="w-full md:w-2/3 flex flex-col justify-center">
@@ -408,24 +466,19 @@
                 <!-- 논문 카드 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow flex flex-col h-full">
                     <div class="flex justify-between items-start mb-2">
-                        <!-- 논문 제목 -->
                         <h3 class="text-xl font-bold text-gray-900">AI 및 LLVM 을 활용한 정적 분석 기반 시큐어 코딩 점검 도구 연구</h3>
                         
-                        <!-- PDF 링크 -->
                         <a href="./assets/docs/KIPS_C2024B0112.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="논문 PDF 보기">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
                     
-                    <!-- 발행일 및 학회/저널 정보 -->
                     <p class="text-gray-500 text-sm mb-4 font-medium"> 한국정보처리학회 / 2024.10</p>
                     
-                    <!-- 논문 초록(Abstract) 또는 요약 -->
                     <p class="text-secondary mb-6 leading-relaxed">
                         이 연구는 LLVM IR 을 활용한 보안 취약점 탐지의 새로운 접근 방식을 제시합니다. Juliet Test Suite 의 CWE-121 Stack-based Buffer Overflow 데이터를 사용하여 Word2Vec 으로 코드를 벡터화하고 LSTM 모델로 학습했습니다. 모델 성능은 정확도 90%, 정밀도 87%, 재현율 93%, F1 스코어 90%로 평가되었습니다. 향후 다양한 보안 취약점을 다룰 수 있는 다중 분류 모델로 확장 가능성을 제안합니다.
                     </p>
                     
-                    <!-- 태그 (저자 역할 등) -->
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">제 1저자</span>
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">머신러닝</span>
@@ -435,24 +488,19 @@
 
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow flex flex-col h-full">
                     <div class="flex justify-between items-start mb-2">
-                        <!-- 논문 제목 -->
                         <h3 class="text-xl font-bold text-gray-900">자격증명 흐름과 자원 접근을 연결하는 CloudTrail 침해 조사 그래프</h3>
                         
-                        <!-- PDF 링크 -->
                         <a href="./assets/docs/CISC-W_2026_paper_96.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="논문 PDF 보기">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
                     
-                    <!-- 발행일 및 학회/저널 정보 -->
                     <p class="text-gray-500 text-sm mb-4 font-medium"> 한국정보보호학회 / 2026.09</p>
                     
-                    <!-- 논문 초록(Abstract) 또는 요약 -->
                     <p class="text-secondary mb-6 leading-relaxed">
                         클라우드 침해 조사에서는 서로 다른 자격증명으로 수행된 호출을 연결하고 각 호출의 대상을 확인해야 하지만, 발급 결과와 후속 호출 주체를 별도로 처리하거나 resources 배열만으로 대상을 추출하면 필요한 연결이 누락될 수 있다. 본 논문은 accessKeyId를 기준으로 발급 대상과 후속 호출 주체를 통합하고 요청·응답 필드에서 대상을 추출하는 CloudTrail 그래프 모델을 제안하며, 워크로드 기반 이동 후보를 관측된 발급과 구분하여 조사 범위를 확장한다. 네 재현 시나리오에서 다중 필드 추출은 정답 자원 식별을 27/32에서 32/32로, 접근 근거 보존을 74/84에서 84/84로 높였고, 공통 조사 전략은 세 시나리오에서 필수 근거를 모두 보존하면서 전체 시간창 대비 반환량을 48.8~94.3% 줄였다.
                     </p>
                     
-                    <!-- 태그 (저자 역할 등) -->
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">제 1저자</span>
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">머신러닝</span>
@@ -462,24 +510,19 @@
                 
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow flex flex-col h-full">
                     <div class="flex justify-between items-start mb-2">
-                        <!-- 논문 제목 -->
                         <h3 class="text-xl font-bold text-gray-900">CloudTrail 관측 공백 환경에서 AWS 인프라 상태 변화 기반 그래프 추적 모델</h3>
                         
-                        <!-- PDF 링크 -->
                         <a href="./assets/docs/CISC-W_2026_paper_265.pdf" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-xl" title="논문 PDF 보기">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
                     
-                    <!-- 발행일 및 학회/저널 정보 -->
                     <p class="text-gray-500 text-sm mb-4 font-medium"> 한국정보보호학회 / 2026.09</p>
                     
-                    <!-- 논문 초록(Abstract) 또는 요약 -->
                     <p class="text-secondary mb-6 leading-relaxed">
                         클라우드 환경에서 발생하는 침해사고 조사는 API 호출 기록인 CloudTrail 로그에 크게 의존한다. 그러나 공격자가 로그 기록을 중지하거나 삭제하는 안티포렌식(Anti-forensics) 행위를 수행할 경우, 조사자는 행위 기록이 전무한 관측 공백(Observation Gap)에 직면하게 된다. 본 연구는 이러한 원본 로그 의존적 조사의 한계를 극복하기 위해, 인프라의 과거와 현재 상태 차이(△S)를 분석하여 다단계 침해 행위를 역추적하는 그래프 기반 추적 모델을 제안한다. 제안 모델은 외부의 격리된 보안 계정에서 다중 도메인 수집기를 통해 AWS 제어 평면의 위변조 불가능한 고유 메타데이터 스냅샷을 확보한다. 이후 추출된 리소스 상태 변화 데이터를 바탕으로 구조적 종속성과 시간적 인접성을 분석하여 흩어진 변경 사항들을 방향성 비순환 그래프(DAG)로 연결한다. Stratus Red Team을 이용한 다단계 공격 에뮬레이션 실험 결과, 제안 모델은 원본 로그 없이도 백도어 계정 생성부터 S3 버킷 정책 변조로 이어지는 인과 관계를 성공적으로 식별하였으며, 환경 내 발생하는 무관한 정상 상태 변화를 효과적으로 고립시켰다. 본 연구는 저비용 상태 비교 아키텍처를 통해 클라우드 환경의 선제적 포렌식 레디니스(Forensic Readiness)를 확보하는 실효성 있는 대안을 제시한다.
                     </p>
                     
-                    <!-- 태그 (저자 역할 등) -->
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">제 1저자</span>
                         <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">머신러닝</span>
@@ -498,7 +541,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Activity 1: 사회리더 멘토링 -->
+                <!-- Activity 1 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
@@ -511,7 +554,7 @@
                     </p>
                 </div>
 
-                <!-- Activity 2: 중학생 멘토링 (야구선수/만다라트) -->
+                <!-- Activity 2 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
@@ -523,10 +566,10 @@
                         야구 선수를 지망하는 중학교 2학년 학생을 대상으로 만다라트(Mandalart) 기법을 활용해 구체적인 목표 설정과 실행 계획 수립을 도왔습니다. 누군가의 성장을 돕는 과정에서 깊은 책임감과 배려심을 배웠습니다.
                     </p>
                 </div>
-                <!-- Activity 4: 개인정보 모니터링단 -->
+                
+                <!-- Activity 3 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
-                        <!-- 개인정보 보호에 어울리는 방패+유저 아이콘 -->
                         <div class="bg-blue-50 p-3 rounded-lg text-primary">
                             <i class="fas fa-user-shield text-xl"></i>
                         </div>
@@ -547,7 +590,6 @@
     </main>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
